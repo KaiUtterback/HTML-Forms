@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Web Form</title>
+    <script>
+        function updateValue(val) {
+            document.getElementById('rangeValue').innerText = val;
+        }
+    </script>
+</head>
+<body>
+    <h1>Comprehensive Web Form</h1>
+    
+    <!-- Task 1: Implementing Email Input -->
+    <form>
+        <fieldset>
+            <legend>Email Input</legend>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </fieldset>
+        <br>
+
+        <!-- Task 2: Utilizing Number Input -->
+        <fieldset>
+            <legend>Number Input</legend>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" min="1" max="100" step="1" required>
+        </fieldset>
+        <br>
+        
+        <!-- Task 3: Employing Date Input -->
+        <fieldset>
+            <legend>Date Input</legend>
+            <label for="date">Select a Date:</label>
+            <input type="date" id="date" name="date" required>
+        </fieldset>
+        <br>
+        
+        <!-- Task 4: Enhancing User Experience with Range Input -->
+        <fieldset>
+            <legend>Range Input</legend>
+            <label for="range">Rating:</label>
+            <input type="range" id="range" name="range" min="1" max="10" oninput="updateValue(this.value)">
+            <span id="rangeValue">5</span>
+        </fieldset>
+        <br>
+        
+        <!-- Task 5 (BONUS): Capturing Color with Color Input -->
+        <fieldset>
+            <legend>Color Input</legend>
+            <label for="color">Choose a Color:</label>
+            <input type="color" id="color" name="color" value="#ff0000">
+        </fieldset>
+        <br>
+        
+        <!-- New Task 1: Creating a Selection Experience -->
+        <fieldset>
+            <legend>Selection Experience</legend>
+            
+            <!-- Select Menu -->
+            <label for="language">Favorite Programming Language:</label>
+            <select id="language" name="language">
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="csharp">C#</option>
+                <option value="php">PHP</option>
+            </select>
+            <br><br>
+            
+            <!-- Radio Buttons -->
+            <fieldset>
+                <legend>Level of Expertise:</legend>
+                <input type="radio" id="beginner" name="expertise" value="beginner">
+                <label for="beginner">Beginner</label>
+                <br>
+                <input type="radio" id="intermediate" name="expertise" value="intermediate">
+                <label for="intermediate">Intermediate</label>
+                <br>
+                <input type="radio" id="advanced" name="expertise" value="advanced">
+                <label for="advanced">Advanced</label>
+            </fieldset>
+            <br>
+            
+            <!-- Checkboxes -->
+            <fieldset>
+                <legend>Preferred Development Platforms:</legend>
+                <input type="checkbox" id="web" name="platform" value="web">
+                <label for="web">Web</label>
+                <br>
+                <input type="checkbox" id="mobile" name="platform" value="mobile">
+                <label for="mobile">Mobile</label>
+                <br>
+                <input type="checkbox" id="desktop" name="platform" value="desktop">
+                <label for="desktop">Desktop</label>
+            </fieldset>
+        </fieldset>
+        <br>
+        
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

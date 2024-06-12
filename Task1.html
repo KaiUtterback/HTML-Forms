@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Input Types</title>
+    <script>
+        function updateValue(val) {
+            document.getElementById('rangeValue').innerText = val;
+        }
+    </script>
+</head>
+<body>
+    <h1>HTML5 Input Types</h1>
+    
+    <!-- Task 1: Implementing Email Input -->
+    <form>
+        <fieldset>
+            <legend>Email Input</legend>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    
+    <!-- Task 2: Utilizing Number Input -->
+    <form>
+        <fieldset>
+            <legend>Number Input</legend>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" min="1" max="100" step="1" required>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    
+    <!-- Task 3: Employing Date Input -->
+    <form>
+        <fieldset>
+            <legend>Date Input</legend>
+            <label for="date">Select a Date:</label>
+            <input type="date" id="date" name="date" required>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    
+    <!-- Task 4: Enhancing User Experience with Range Input -->
+    <form>
+        <fieldset>
+            <legend>Range Input</legend>
+            <label for="range">Rating:</label>
+            <input type="range" id="range" name="range" min="1" max="10" oninput="updateValue(this.value)">
+            <span id="rangeValue">5</span>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    
+    <!-- Task 5 (BONUS): Capturing Color with Color Input -->
+    <form>
+        <fieldset>
+            <legend>Color Input</legend>
+            <label for="color">Choose a Color:</label>
+            <input type="color" id="color" name="color" value="#ff0000">
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
